@@ -89,4 +89,4 @@ def logoutPage(request):
     logout(request)
     return redirect('/')
 
-\
+
