@@ -1,0 +1,17 @@
+{% block content%}
+<!DOCTYPE html>
+<html lang = "en-US">
+
+<body>
+    <h1>Miscallaneous Tips on Webapp Devolopment and Cloud Security</h1>
+    <!--<button onclick = "myfunction()">Click me</button>-->
+    <p id = 'demo'>{{ tips }}</p>
+    {% comment %} <script> {% endcomment %}
+        {% comment %} function myfunction(){ {% endcomment %}
+            {% comment %} document.getElementById('demo').innerHTML = JSON.stringify(tips);  {% endcomment %}
+        {% comment %} } {% endcomment %}
+
+    {% comment %} </script> {% endcomment %}
+</body>
+</html>
+{%endblock%}

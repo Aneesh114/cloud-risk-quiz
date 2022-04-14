@@ -1,9 +1,9 @@
-{% extends 'Quiz/dependencies.html' %}
+ {% extends 'Quiz/dependencies.html' %} 
 
 {% block content %}
 
 <div class="container ">
-        
+      
     <div class="card-columns" style="padding: 10px; margin: 20px;">
         <div class="card" align="centre " style="width: 32rem; border:5px black solid">
             <img class="card-img-top" src="http://kmit.in/emagazine/wp-content/uploads/2018/02/karnataka-results.jpg" alt="Card image cap">
@@ -15,6 +15,10 @@
                 <p class="card-text">Correct answers: {{correct}}</p>
                 <p class="card-text">Incorrect answers: {{wrong}}</p>
                 <p class="card-text">Total questions: {{total}}</p>
+                <p class="card-text">Security Answered correct: {{sec}}</p>
+                <p class="card-text">Dev answered correct: {{dev}}</p>
+                <p class="card-text">Security Answered correct: {{secn}}</p>
+                <p class="card-text">Dev answered correct: {{devn}}</p>
                 <h5> References for answers </h5>
                <div>
                 {% for r in references %}
@@ -40,5 +44,39 @@
     </div>
 
 </div>
+<br>
 
-{% endblock %}
+  
+<body>
+  
+    <h1>Analysis of your performance</h1>
+      
+    <div id="piechart"></div>
+      
+    <script type="text/javascript"
+     src="https://www.gstatic.com/charts/loader.js"></script>
+      
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+      
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Questions answered', 'Number'],
+      ['Wrong', {{wrong}}],
+      ['Security questions answered correct', {{sec}}],
+      ['Devolpment questions answered correct', {{dev}}]
+    ]);
+      var options = { 'width':550, 'height':400};
+      var chart =
+     new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+    </script>
+      
+    </body>
+<body>
+    <h3> If you want to improve your skills in a specific area, you can click on the links in this page.</h3> <br>
+    <a href = 'http://127.0.0.1:8000/learn/'> Learn more about Webapp Delopment and Cloud Security </a>
+
+  {% endblock %}

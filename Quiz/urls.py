@@ -10,5 +10,9 @@ urlpatterns = [
    # path('addQuestion/', addQuestion,name='addQuestion'),
     path('logout/', logoutPage,name='logout'),
     path('register/', registerPage,name='register'),
+    path('tip/',tipsPage,name = 'tip'),
+    path('learn/',learnPage, name = 'learn'),
+    path('quiz/',quizPage,name = 'quiz'),
+    path('analyze/',analyzePage,name = 'analyze'),
 
 ]

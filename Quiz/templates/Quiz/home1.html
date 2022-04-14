@@ -1,0 +1,21 @@
+{% extends 'Quiz/dependencies.html' %}
+{% block content %}
+
+<body>
+    
+    <button onclick = "quiz()">Take a test</button>
+    <button onclick = "learn()">Learn more about cloud security</button>
+    <button onclick = "tip()">Tip of the Day</button>
+<script>     
+function quiz(){
+    location.replace("quiz/")
+}
+function learn(){
+    location.replace("learn/")
+}
+function tip(){
+    location.replace("tip/")
+}
+</script>
+</body>
+{% endblock %}
