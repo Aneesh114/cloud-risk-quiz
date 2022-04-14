@@ -1,3 +1,5 @@
 {
-    "appService.showBuildDuringDeployPrompt": false
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/de1f4e75-9d44-4bd6-985a-9a2a307a85a4/resourceGroups/aproject/providers/Microsoft.Web/sites/cloud-risk-quiz",
+    "appService.deploySubpath": "."
 }
